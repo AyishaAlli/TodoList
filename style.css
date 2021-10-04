@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* LOG IN PAGE LAYOUT */
+body{
+    background-color: #c4c4c4;
+    font-family: sans-serif;
+}
+.container{
+    display: flex;
+    border: 2px black solid;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 500px;
+    background: red;  
+}
+
+.leftContainer, .email, .password, .logInBtn{
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin: 20px 0px 20px 0px
+}
+
+.leftContainer{
+    margin-left: 50px;
+    margin-top: 120px;
+    background-color: white;
+    width: 350px;
+    height: 250px;
+    top: 200px;
+    padding: 20px;
+    margin-right: 100px;
+    border: 2px black solid;
+    border-radius: 20px;
+
+}
+
+.rightContainer{
+padding: 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+font-size: 10px;
+}
+
+/*INPUT SECTION - LEFT SIDE */
+#email, #pw{
+    padding: 0.5em;
+    width: 20em;
+    background-color: lightgray;
+    border: none;
+}
+
+#logInBtn{
+text-align: center;
+margin-left: 100px;
+padding: 3px 20px 3px 20px;
+background-color: green;
+border: 1px;
+}
+
+i{
+    font-size: 40px;
+    margin-top: 15px;
+}
+#createNewAcc{
+    margin-left: 195px;
+    font-size: 10px;
+}
