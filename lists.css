@@ -4,9 +4,30 @@
     margin: 0;
 }
 
+.modal{
+display: none;
+position: fixed;
+z-index: 1; 
+left: 0;
+top: 0;
+width: 80%;
+height: 80%;
+overflow: auto; 
+background-color: white; 
+border: 7px black solid;
+border-radius: 20px;
+margin-left: 60px;
+margin-top: 20px;
+}
+/*background filter*/
+.blur{
+    filter: blur(8px);
+}
+
 body{
     background-color: #c4c4c4;
     font-family: sans-serif;
+    
 }
 
 .maincontainer{
@@ -33,9 +54,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 h1{
-    margin-right: 20px;
-    
+    margin-right: 20px;  
+}
+input{
+    margin-right: 200px;
+    padding:5px 200px 5px 2px;
 }
