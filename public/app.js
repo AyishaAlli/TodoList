@@ -12,22 +12,36 @@ const todoArray = [];
 
 addTodoBtn.addEventListener("click", () => {
   if (userInput.value != "") {
-    const newTodo = document.createElement("li");
-    newTodo.setAttribute("class", "todo");
-    todoArray.push(userInput.value);
-    newTodo.appendChild(document.createTextNode(userInput.value));
-    todoList.appendChild(newTodo);
-    
+
+    todoList.innerHTML += `
+            <li class="task">
+                <span id="todoName">
+                    ${userInput.value}
+                </span>
+                    <i class="far fa-trash-alt"></i>
+            </li>
+        `;
+  } else {
+    alert("Please enter a new todo")
   }
 });
 
-for (let i = 0; i < todo.length; i++) {
-  todo[i].addEventListener("click", () => {
-    //todo[i].style.textDecoration = "line-through";
-    todo[i].style.color = "green";
-    todo[i].classList.toggle("complete");
-  });
-}
+// for (let i = 0; i < todo.length; i++) {
 
+//   todo[i].addEventListener("click", () => {
+//     //todo[i].style.textDecoration = "line-through";
+//     todo[i].style.color = "green";
+//     todo[i].classList.toggle("complete");
+//   });
+// }
+for (let i = 0; i < todo.length; i++) {
+
+todo.addEventListener("click", () => {
+
+  todo.forEach((listItem)=>{
+    listItem.style.color ="green"
+    listItem.classList.toggle("complete");
+ 
+})})}
 // Above code only works on todos that are already there, but not new ones 
 // Need to figure out how to add a trash icon with every todo
